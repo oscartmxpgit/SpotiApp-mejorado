@@ -1,0 +1,18 @@
+<p>Resultados de la búsqueda de "{{artistName}}"</p>
+<div class="container">
+    <div class="row" style="align-items: center;">
+        <div class="col-4" *ngFor="let artist of resultados.artists.items">
+            <div class="card" style="margin: 1%;">
+             <div class="card-body">
+                 <div class="card-body">
+
+                         <a routerLink="/artista/{{artist.id}}">{{artist.name}}</a>
+                         <img class="card-img top" [src]="artist.images | sinfoto " alt="Card image cap">
+
+                   </div>
+             </div>
+           </div>
+         </div>
+
+    </div>
+</div>

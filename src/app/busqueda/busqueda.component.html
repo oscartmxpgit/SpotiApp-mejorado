@@ -1,0 +1,13 @@
+<!-- Search form -->
+
+<div class="container" style="margin: 5%;">
+    <div class="row" style="align-items: center;">
+        <form class="form-inline md-form mr-auto mb-4">
+            <input class="form-control mr-sm-2" type="text" placeholder="Busque artista..." #nombre aria-label="Search">
+            <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit" (click)="buscar(nombre.value)">Buscar</button>
+          </form>
+        <div class="col-2">
+            <a class="btn btn-success" routerLink="javascript:history.back()">Ir atrás</a>
+        </div>
+    </div>
+</div>

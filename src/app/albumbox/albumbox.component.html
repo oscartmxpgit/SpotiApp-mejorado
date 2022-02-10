@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+  <img src="{{album.images[0].url}}" alt="imagen album" />
+  <div class="card-body">
+    <h3>{{album.name  | uppercase }}</h3>
+    <div class="col-6" *ngFor="let artist of album.artists">
+        <a routerLink="/artista/{{artist.id}}">{{artist.name}}</a>
+      </div>
+    <p>{{album.release_date}}</p>
+  </div>
+</div>

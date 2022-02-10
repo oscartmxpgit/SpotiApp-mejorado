@@ -1,0 +1,44 @@
+<div >
+    <h3>{{artist.name}}</h3>
+
+
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <div class="col-4">
+                <img src="{{artist.images[0].url}}" class="rounded-circle" width="160" alt="imagen album" />
+            </div>
+
+            <div class="col-2" >
+                <a class="btn btn-success" routerLink="https://open.spotify.com/artist/{{artistId}}">Abir Spotify</a>
+            </div>
+            <div class="col-2">
+                <a class="btn btn-success" routerLink="javascript:history.back()">Ir atrás</a>
+            </div>
+        </div>
+    </div>
+
+
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Foto</th>
+            <th scope="col">Album</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Popularidad</th>
+            <th scope="col">Escuchar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <tr *ngFor="let track of songs.tracks">
+                <td><img [src]="track.album.images[0].url" width="100" alt="imagen album" /></td>
+                <td>{{track.album.name}}</td>
+                <td>{{track.name}}</td>
+                <td>{{track.popularity}}</td>
+                <th><iframe [src]="track.uri | domseguro:'https://embed.spotify.com/?uri='" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></th>
+
+          </tr>
+        </tbody>
+      </table>
+</div>
+
